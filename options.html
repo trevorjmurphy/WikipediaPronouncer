@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			button {
+				height: 30px;
+				width: 30px;
+				outline: none;
+				margin: 10px;
+				background-color: #125367;
+			}
+			body {	
+				margin: auto;
+				text-align: center;
+				background-image: url("options_background.jpg");
+				background-repeat: repeat;
+			}
+			label {
+				font-size: 20px;
+				font-family: "Comic Sans MS", sans-serif;
+			}
+			#title {
+				font-size: 50px;
+			}
+			div {
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				width: 600px;
+				background-color: #ffffff;
+				border-color: #000000;
+				border-radius: 5px;
+				boder-style: inset;
+			}
+			hr.fancy {
+				overflow: visible; /* For IE */
+				padding: 0;
+				border: none;
+				border-top: medium double #333;
+				color: #333;
+				text-align: center;
+			}
+			hr.fancy:after {
+				content: "|";
+				display: inline-block;
+				position: relative;
+				top: -0.7em;
+				font-size: 1.5em;
+				padding: 0 0.25em;
+				background: white;
+				margin-bottom: -30px;
+			}
+			hr.seperate {
+				border: 0;
+				height: 0;
+				border-top: 1px solid rgba(0, 0, 0, 0.1);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			}
+			label.footer {
+				font-size: 10px;
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<label id="title"><b>Wikipedia Pronouncer<b/></label> <hr class="fancy"/>
+			<label>TTS Language</label> <hr class="seperate"/>
+			<select id="language">
+				<option id="en-US" value="en-US">American English</option>
+				<option id="en-GB" value="en-GB">British English</option>
+				<option id="ja" value="ja">Japanese</option>
+			</select> <br/><br/><hr/>
+			<label>TTS Voice Volume</label> <hr class="seperate"/>
+			<label id="volumePercent">0%</label><br/><br/>
+			<input id="volume" type="range" name="volume" min="0" max="1" step="0.01" style="width: 300px"/> <br/><br/><hr/>
+			<label>TTS Voice Speed</label> <hr class="seperate"/>
+			<label id="speedPercent">0%</label><br/><br/>
+			<input id="speed" type="range" name="speed" min="0" max="10" step="0.1" style="width: 300px"/> <br/><br/>
+			<label class="footer">*TTS = Text-To-Speech<label/>
+		</div>
+	</body>
+	<script src="options.js"></script>
+</html>
